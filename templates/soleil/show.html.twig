@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Soleil{% endblock %}
+
+{% block body %}
+    <h1>Soleil</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ soleil.id }}</td>
+            </tr>
+            <tr>
+                <th>Truc</th>
+                <td>{{ soleil.truc }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_soleil_index') }}">back to list</a>
+
+    <a href="{{ path('app_soleil_edit', {'id': soleil.id}) }}">edit</a>
+
+    {{ include('soleil/_delete_form.html.twig') }}
+{% endblock %}

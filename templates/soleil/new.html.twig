@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Soleil{% endblock %}
+
+{% block body %}
+    <h1>Create new Soleil</h1>
+
+    {{ include('soleil/_form.html.twig') }}
+
+    <a href="{{ path('app_soleil_index') }}">back to list</a>
+{% endblock %}
